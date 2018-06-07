@@ -10,10 +10,10 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GloboforceTitleTest {
+public class GloboforceTitleTestGetParamFromJob {
 
     @Test
-    public void test() throws MalformedURLException {
+    public void testTitle() throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setBrowserName("chrome");
         cap.setPlatform(Platform.WINDOWS);
