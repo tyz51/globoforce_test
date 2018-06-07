@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -15,8 +16,7 @@ public class GloboforceTitleTestWithParameters {
     @Test
     public void testTitle() throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
-        String browser = System.getProperty("browser");
-        cap.setBrowserName(browser);
+        cap.setBrowserName("chrome");
         cap.setPlatform(Platform.WINDOWS);
         URL url = new URL("http://10.9.126.5:4444/wd/hub");
         WebDriver driver = new RemoteWebDriver(url, cap);

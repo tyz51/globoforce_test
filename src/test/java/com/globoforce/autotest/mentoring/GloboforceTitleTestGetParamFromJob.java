@@ -15,8 +15,9 @@ public class GloboforceTitleTestGetParamFromJob {
     @Test
     public void testTitle() throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setBrowserName("chrome");
-        cap.setPlatform(Platform.WINDOWS);
+        String browserName = System.getProperty("browserName");
+        cap.setBrowserName(browserName);
+        cap.setPlatform(Platform.fromString("WINDOWS"));
         URL url = new URL("http://10.9.126.5:4444/wd/hub");
         WebDriver driver = new RemoteWebDriver(url, cap);
         driver.get("https://www.globoforce.com/");
