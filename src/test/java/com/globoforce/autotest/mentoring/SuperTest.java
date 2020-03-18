@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class SuperTest {
 
-    @Test
+    @Test(description = "TA-T10 TEST DESCRIPTION")
     public void test() {
         Assert.assertTrue(true);
     }
